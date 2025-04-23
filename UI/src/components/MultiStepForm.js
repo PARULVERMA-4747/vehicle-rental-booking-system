@@ -14,7 +14,10 @@ const MultiStepForm = () => {
 
   return (
     <Card style={{ maxWidth: 500, margin: '50px auto' }}>
-      <Step next={() => setCurrent(current + 1)} />
+      <Step 
+        next={() => setCurrent(current + 1)} 
+        goToFirstStep={() => setCurrent(0)} // 👈 Pass this prop to reset to Step1
+      />
     </Card>
   );
 };
